@@ -41,14 +41,21 @@ Xft.lcdfilter : lcddefault
 URxvt.intensityStyles:	false
 URxvt*background:       [90]#000000
 URxvt*depth:		32
-URxvt.font: xft:Hack Nerd Font:style=Regular:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:Hack Nerd Font:style=Bold:size=12:antialias=true:hinting=true
-URxvt.italicFont: xft:Hack Nerd Font:style=Oblique:size=12:antialias=true:hinting=true
+URxvt.font: xft:MesloLGM Nerd Font Mono:style=RegularForPowerline:size=12:antialias=true:hinting=true
+URxvt.boldFont: xft:MesloLGM Nerd Font Mono:style=BoldForPowerline:size=12:antialias=true:hinting=true
+URxvt.italicFont: xft:MesloLGM Nerd Font Mono:style=ItalicForPowerline:size=12:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:Hack Nerd Font:style=Bold Oblique:size=12:antialias=true:hinting=true
 URxvt.scrollBar:	false
 URxvt.cursorColor: 	white
 URxvt.letterSpace:	1
-URxvt.perl-ext-common:  default,tabbedex
+URxvt.perl-ext-common:      default,tabbedex,clipboard,url-select,keyboard-select,font-size
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.keysym.C-Up:	perl:font-size:increase
+URxvt.keysym.C-Down:	perl:font-size:decrease
 
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000
