@@ -17,9 +17,9 @@ set $mod Mod4
 font pango:Source Code Pro 10
 
 
-for_window [class="^.*"] border pixel 0
-gaps inner 10
-gaps outer 5
+for_window [class="^.*"] border pixel 1
+gaps inner 8
+gaps outer 3
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -213,7 +213,7 @@ set_from_resource $darkorange	color17 #000000
 set $transparent #00000000
 
 #                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
-#client.focused		$darkblack		$red		$darkorange	$darkorange		$darkblue
+client.focused		$white		$orange		$white	$darkorange		$darkorange
 #client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
 #client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
 #client.urgent		$darkred	$darkred	$black		$darkred		$darkred
@@ -223,16 +223,16 @@ set $transparent #00000000
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
+    status_command i3blocks
 	position top
 	font pango:SauceCodePro Nerd Font Black 10
 	colors {
 		background $darkblack
 		statusline $darkwhite
-		separator $darkblue
-		focused_workspace  $blue $darkblue $darkblack
-        	active_workspace   $blue $blue $darkwhite
-      		inactive_workspace $darkblack $darkblack $white
+		separator $darkorange
+		focused_workspace  $orange $darkorange $darkblack
+       	active_workspace   $orange $orange $darkwhite
+    	inactive_workspace $darkblack $darkblack $white
 		urgent_workspace $darkblack $darkblack $white
 	}
 }
