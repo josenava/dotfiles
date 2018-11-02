@@ -17,8 +17,8 @@ compinit
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLINE_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLINE_RIGHT_PROMPT_ELEMENTS=(time)
-#POWERLEVEL9K_DISABLE_RPROMPT=true
+#POWERLINE_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_DISABLE_RPROMPT=true
 
 plugins=(git zsh-syntax-highlighting)
 
