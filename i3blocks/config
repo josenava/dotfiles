@@ -33,14 +33,32 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
-label=VOL
+#[volume]
 #label=♪
-instance=Master
-#instance=PCM
-interval=once
-signal=10
-
+#instance=Master
+#interval=once
+#signal=10
+[volume-pulseaudio]
+command=~/.config/i3blocks/scripts/volume-pulseaudio -C "#a8a19f" -S
+interval=persist
+signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${NAME}]"
+#AUDIO_HIGH_SYMBOL='  '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL='  '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL='  '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#a8a19f"
+#MUTED_COLOR="#a0a0a0"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
@@ -62,7 +80,7 @@ interval=30
 # (defaults to 10 for 10%).
 [disk]
 label=HOME
-#instance=/mnt/data
+instance=/
 interval=30
 
 # Network interface monitoring
@@ -88,10 +106,10 @@ interval=30
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU: 100.00%
+#[cpu_usage]
+#label=CPU
+#interval=10
+#min_width=CPU: 100.00%
 #separator=false
 
 #[load_average]
@@ -120,7 +138,11 @@ interval=5
 #instance=spotify
 #interval=5
 #signal=10
-
+[spotify]
+label=
+command=~/.config/i3blocks/scripts/spotify.py
+color=#81b71a
+interval=5
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
@@ -132,9 +154,9 @@ interval=5
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-label=TEMP
-interval=10
+#[temperature]
+#label=TEMP
+#interval=10
 
 # Key indicators
 #

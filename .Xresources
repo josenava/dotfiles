@@ -7,10 +7,10 @@ Xft.hintstyle : hintfull
 Xft.lcdfilter : lcddefault
 
 
-*foreground: #00cc00
-*foreground_bold: #a8a19f
+!!*foreground: #00cc00
+!!*foreground_bold: #a8a19f
 *cursor: #a8a19f
-*background:   [90]#1b1918
+!!*background:   [90]#1b1918
 !!*background: rgba(0, 0, 0, .7)
 
 !! black
@@ -37,9 +37,13 @@ Xft.lcdfilter : lcddefault
 !! white
 *color7: #a8a19f
 *color15: #f1efee
+!! orange
+*color16: #FFA500
+*color17: #FF8C00
 
 URxvt.intensityStyles:	false
 URxvt*background:       [90]#000000
+URxvt*foreground:       #F1EFEE
 URxvt*depth:		32
 URxvt.font: xft:MesloLGM Nerd Font Mono:style=RegularForPowerline:size=12:antialias=true:hinting=true
 URxvt.boldFont: xft:MesloLGM Nerd Font Mono:style=BoldForPowerline:size=12:antialias=true:hinting=true
