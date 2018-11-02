@@ -21,11 +21,13 @@ try:
 
     spotify_iface = dbus.Interface(spotify, 'org.freedesktop.DBus.Properties')
     props = spotify_iface.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
-
+    
+    artist = str(props['xesam:artist'][0])
+    title = str(props['xesam:title'])
     if (sys.version_info > (3, 0)):
-        print(str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']))
+        print(artist[:50] + " - " + title[:50])
     else:
-        print(props['xesam:artist'][0] + " - " + props['xesam:title']).encode('utf-8')
+        print(artist[:50] + " - " + title[:50]).encode('utf-8')
     exit
 except dbus.exceptions.DBusException:
     exit
