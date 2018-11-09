@@ -45,13 +45,12 @@ URxvt.intensityStyles:	false
 URxvt*background:       [90]#000000
 URxvt*foreground:       #F1EFEE
 URxvt*depth:		32
-URxvt.font: xft:MesloLGM Nerd Font Mono:style=RegularForPowerline:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:MesloLGM Nerd Font Mono:style=BoldForPowerline:size=12:antialias=true:hinting=true
-URxvt.italicFont: xft:MesloLGM Nerd Font Mono:style=ItalicForPowerline:size=12:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Hack Nerd Font:style=Bold Oblique:size=12:antialias=true:hinting=true
+URxvt.font: xft:DejaVuSansMono Nerd Font:style=Book:size=12:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font:style=Bold:size=12:antialias=true:hinting=true
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font:style=Oblique:size=12:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font:style=Bold Oblique:size=12:antialias=true:hinting=true
 URxvt.scrollBar:	false
 URxvt.cursorColor: 	white
-URxvt.letterSpace:	1
 URxvt.perl-ext-common:      default,tabbedex,clipboard,url-select,keyboard-select,font-size
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
@@ -63,9 +62,9 @@ URxvt.keysym.C-Down:	perl:font-size:decrease
 
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000
-rofi.color-normal:	#111, #819396, #222, #008ed4, #ffffff
-rofi.color-active:	#002b37, #008ed4, #003643, #008ed4, #66c6ff
-rofi.color-urgent:	#002b37, #da4281, #003643, #008ed4, #890661
+rofi.color-normal:	#111, #819396, #222, #FFA500, #ffffff
+rofi.color-active:	#FFA500, #FFA500, #FFA500, #FFA500, #FFB266
+rofi.color-urgent:	#FFA500, #FFA500, #FFA500, #FFA500, #FFB266
 
 rofi.fake-transparency:	true
 rofi.lines:		3

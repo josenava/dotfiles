@@ -1,4 +1,4 @@
-# dotfiles
+# dotfile
 
 My dotfiles for i3, urxvt & i3blocks.
 

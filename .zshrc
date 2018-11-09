@@ -20,7 +20,14 @@ POWERLINE_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 #POWERLINE_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(
+	git
+	zsh-syntax-highlighting
+	pip
+	python
+	docker
+	npm
+)
 
 neofetch
 
