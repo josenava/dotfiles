@@ -111,11 +111,11 @@ bindsym $mod+Shift+o gaps outer current minus 3
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "  "
-set $ws2 "  "
-set $ws3 "  "
-set $ws4 "  "
-set $ws5 " ♫ "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -157,6 +157,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# lock screen
+bindsym Ctrl+Mod1+l exec --no-startup-id $HOME/.config/i3lock/lock.sh
 
 # volume control
 bindsym Ctrl+F2 exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
@@ -226,24 +229,25 @@ client.focused		$white		$orange		$white	$darkorange		$darkorange
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3blocks
-	position top
-	font pango:SauceCodePro Nerd Font Black 10
-	colors {
-		background $darkblack
-		statusline $darkwhite
-		separator $darkorange
-		focused_workspace  $orange $darkorange $darkblack
-       	active_workspace   $orange $orange $darkwhite
-    	inactive_workspace $darkblack $darkblack $white
-		urgent_workspace $darkblack $darkblack $white
-	}
-}
+#bar {
+#    status_command i3blocks
+#	position top
+#	font pango:SauceCodePro Nerd Font Black 10
+#	colors {
+#		background $darkblack
+#		statusline $darkwhite
+#		separator $darkorange
+#		focused_workspace  $orange $darkorange $darkblack
+#       	active_workspace   $orange $orange $darkwhite
+#    	inactive_workspace $darkblack $darkblack $white
+#		urgent_workspace $darkblack $darkblack $white
+#	}
+#}
 
 
 #startup
 #exec_always --no-startup-id feh --bg-fill ~/.wallpapers/maxell-chair-man-1080p-amber.png
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id compton
 exec_always --no-startup-id setxkbmap -layout us,es -option grp:shift_caps_toggle

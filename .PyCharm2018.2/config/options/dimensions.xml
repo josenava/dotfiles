@@ -1,0 +1,48 @@
+<application>
+  <component name="DimensionService">
+    <location key="FileChooserDialogImpl.0.0.1920.1080" x="728" y="107" />
+    <location key="WELCOME_SCREEN.0.0.1920.1080" x="959" y="420" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.1920.1080" x="578" y="405" />
+    <location key="#Browse_Repositories.0.0.1920.1080" x="100" y="142" />
+    <location key="SettingsEditor.0.0.1920.1080" x="32" y="47" />
+    <location key="NewPhpClassDialog.0.0.1920.1080" x="154" y="146" />
+    <location key="#com.intellij.ide.util.MemberChooser.0.0.1920.1080" x="328" y="124" />
+    <location key="#com.intellij.refactoring.rename.AutomaticRenamingDialog.0.0.1920.1080" x="248" y="-18" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1080" x="182" y="308" />
+    <location key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1.0.0.1920.1080" x="221" y="58" />
+    <location key="com.jetbrains.php.test.PhpNewTestDialog.0.0.1920.1080" x="102" y="17" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="212" y="364" />
+    <location key="#SQL_Dialects.0.0.1920.1080" x="-2" y="224" />
+    <location key="#Docker.0.0.1920.1080" x="292" y="300" />
+    <location key="#CLI_Interpreters.0.0.1920.1080" x="150" y="111" />
+    <location key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog.0.0.1920.1080" x="160" y="241" />
+    <location key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0.0.0.1920.1080" x="319" y="142" />
+    <location key="CommitChangelistDialog2.0.0.1920.1080" x="179" y="24" />
+    <location key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration.0.0.1920.1080" x="303" y="108" />
+    <location key="ProcessPopupWindow.0.0.1920.1080" x="68" y="878" />
+    <location key="find.popup.0.0.1920.1080" x="272" y="137" />
+    <size key="FileChooserDialogImpl.0.0.1920.1080" width="428" height="474" />
+    <size key="#Browse_Repositories.0.0.1920.1080" width="828" height="674" />
+    <size key="SettingsEditor.0.0.1920.1080" width="1058" height="697" />
+    <size key="NewPhpClassDialog.0.0.1920.1080" width="798" height="364" />
+    <size key="#com.intellij.ide.util.MemberChooser.0.0.1920.1080" width="465" height="552" />
+    <size key="#com.intellij.refactoring.rename.AutomaticRenamingDialog.0.0.1920.1080" width="644" height="1046" />
+    <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1080" width="579" height="381" />
+    <size key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1.0.0.1920.1080" width="505" height="890" />
+    <size key="com.jetbrains.php.test.PhpNewTestDialog.0.0.1920.1080" width="1213" height="755" />
+    <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" width="528" height="313" />
+    <size key="#SQL_Dialects.0.0.1920.1080" width="1356" height="594" />
+    <size key="#Docker.0.0.1920.1080" width="523" height="339" />
+    <size key="#CLI_Interpreters.0.0.1920.1080" width="828" height="674" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1872" height="289" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1872" height="289" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1872" height="289" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1872" height="289" />
+    <size key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog.0.0.1920.1080" width="628" height="522" />
+    <size key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0.0.0.1920.1080" width="505" height="757" />
+    <size key="CommitChangelistDialog2.0.0.1920.1080" width="782" height="958" />
+    <size key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration.0.0.1920.1080" width="505" height="524" />
+    <size key="ProcessPopupWindow.0.0.1920.1080" width="400" height="214" />
+    <size key="find.popup.0.0.1920.1080" width="660" height="680" />
+  </component>
+</application>

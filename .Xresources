@@ -45,10 +45,10 @@ URxvt.intensityStyles:	false
 URxvt*background:       [90]#000000
 URxvt*foreground:       #F1EFEE
 URxvt*depth:		32
-URxvt.font: xft:DejaVuSansMono Nerd Font:style=Book:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:DejaVuSansMono Nerd Font:style=Bold:size=12:antialias=true:hinting=true
-URxvt.italicFont: xft:DejaVuSansMono Nerd Font:style=Oblique:size=12:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font:style=Bold Oblique:size=12:antialias=true:hinting=true
+URxvt.font: xft:DejaVuSansMono Nerd Font:style=Book:size=12
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font:style=Bold:size=12
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font:style=Oblique:size=12
+URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font:style=Bold Oblique:size=12
 URxvt.scrollBar:	false
 URxvt.cursorColor: 	white
 URxvt.perl-ext-common:      default,tabbedex,clipboard,url-select,keyboard-select,font-size

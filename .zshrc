@@ -27,6 +27,7 @@ plugins=(
 	python
 	docker
 	npm
+	history
 )
 
 neofetch

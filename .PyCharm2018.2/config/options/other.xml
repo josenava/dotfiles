@@ -1,0 +1,22 @@
+<application>
+  <component name="PhpRefactoringSettings">
+    <option name="EXTRACT_METHOD_DEFAULT_VISIBILITY" value="private" />
+  </component>
+  <component name="PyTestFrameworkService">
+    <option name="SDK_TO_PYTEST">
+      <map>
+        <entry key="docker-compose://[/home/jose/projects/kraken_trader/docker-compose.yml]:web/python" value="false" />
+      </map>
+    </option>
+    <option name="SDK_TO_NOSETEST">
+      <map>
+        <entry key="docker-compose://[/home/jose/projects/kraken_trader/docker-compose.yml]:web/python" value="false" />
+      </map>
+    </option>
+    <option name="SDK_TO_TRIALTEST">
+      <map>
+        <entry key="docker-compose://[/home/jose/projects/kraken_trader/docker-compose.yml]:web/python" value="false" />
+      </map>
+    </option>
+  </component>
+</application>
