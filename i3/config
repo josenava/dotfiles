@@ -248,6 +248,7 @@ client.focused		$white		$orange		$white	$darkorange		$darkorange
 #startup
 #exec_always --no-startup-id feh --bg-fill ~/.wallpapers/maxell-chair-man-1080p-amber.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id nm-applet
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id compton
 exec_always --no-startup-id setxkbmap -layout us,es -option grp:shift_caps_toggle
