@@ -159,12 +159,12 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock screen
-bindsym Ctrl+Mod1+l exec --no-startup-id $HOME/.config/i3lock/lock.sh
+bindsym XF86ScreenSaver exec --no-startup-id $HOME/.config/i3lock/lock.sh
 
 # volume control
-bindsym Ctrl+F2 exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-bindsym Ctrl+F3 exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym Ctrl+F4 exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 
 
 assign [class="firefox"]    $ws1
@@ -180,16 +180,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 3 px or 3 ppt
+        bindsym k resize grow height 3 px or 3 ppt
+        bindsym l resize shrink height 3 px or 3 ppt
+        bindsym semicolon resize grow width 3 px or 3 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -246,9 +246,11 @@ client.focused		$white		$orange		$white	$darkorange		$darkorange
 
 
 #startup
-#exec_always --no-startup-id feh --bg-fill ~/.wallpapers/maxell-chair-man-1080p-amber.png
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/wallhaven-717496.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id nitrogen --restore
+#exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id compton
 exec_always --no-startup-id setxkbmap -layout us,es -option grp:shift_caps_toggle
+exec_always --no-startup-id xfce4-power-mananger
+exec_always --no-startup-id autorandr --change

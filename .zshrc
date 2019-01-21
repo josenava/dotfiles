@@ -9,9 +9,16 @@ SAVEHIST=1000
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLINE_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs virtualenv pyenv)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER="..."
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
+POWERLEVEL9K_VCS_SHORTEN_LENGTH=25
+POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
+POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_VCS_SHORTEN_DELIMITER=".."
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # HYPHEN_INSENSITIVE="true"
@@ -81,6 +88,7 @@ alias gcm="git commit -m"
 alias dcup="docker-compose up -d"
 alias dcdown="docker-compose down"
 alias dcps="docker-compose ps"
+alias update="yay -Syu"
 
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh

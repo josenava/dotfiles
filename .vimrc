@@ -11,9 +11,9 @@ set showmatch
 set hlsearch
 set incsearch
 set cursorline
+set laststatus=2
 
-let g:airline_powerline_fonts = 1
+set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
 
-if !exists('g:airline_symbols')
-   let g:airline_symbols = {}
-endif
+let g:powerline_pycmd = "py3"
+
