@@ -36,7 +36,7 @@ gaps outer 3
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,9 +168,13 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 
 
 assign [class="firefox"]    $ws1
-assign [class="code"]	    $ws2
+assign [class="code"]	    $ws3
 assign [class="spotify"]    $ws5
 
+# apps shortcuts
+bindsym mod1+f exec --no-startup-id firefox
+bindsym mod1+s exec --no-startup-id spotify
+bindsym mod1+p exec --no-startup-id pycharm
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -246,7 +250,7 @@ client.focused		$white		$orange		$white	$darkorange		$darkorange
 
 
 #startup
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/wallhaven-717496.png
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/solar_system.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
 #exec_always --no-startup-id nitrogen --restore

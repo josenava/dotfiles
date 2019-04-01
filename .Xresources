@@ -41,14 +41,16 @@ Xft.lcdfilter : lcddefault
 *color16: #FFA500
 *color17: #FF8C00
 
+*alpha: 0.85
+
 URxvt.intensityStyles:	false
-URxvt*background:       [95]#000000
+URxvt*background:       [85]#000000
 URxvt*foreground:       #F1EFEE
 URxvt*depth:		32
-URxvt.font: xft: RobotoMono Nerd Font Mono:style=Medium,Regular:size=14
-URxvt.boldFont: xft: RobotoMono Nerd Font Mono:style=Medium,Bold:size=14
-URxvt.italicFont: xft: RobotoMono Nerd Font Mono:style=Medium,Italic:size=14
-URxvt.boldItalicFont: xft: RobotoMono Nerd Font Mono:style=Bold Italic:size=14
+URxvt.font: xft:RobotoMono Nerd Font Mono:style=Medium,Regular:size=18
+URxvt.boldFont: xft: RobotoMono Nerd Font Mono:style=Medium,Bold:size=18
+URxvt.italicFont: xft: RobotoMono Nerd Font Mono:style=Medium,Italic:size=18
+URxvt.boldItalicFont: xft: RobotoMono Nerd Font Mono:style=Bold Italic:size=18
 URxvt.scrollBar:	false
 URxvt.cursorColor: 	white
 URxvt.perl-ext-common:      default,tabbedex,clipboard,url-select,keyboard-select,font-size
@@ -57,8 +59,13 @@ URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.C-Up:	perl:font-size:increase
-URxvt.keysym.C-Down:	perl:font-size:decrease
+URxvt.keysym.M-Up:     perl:font-size:increase
+URxvt.keysym.C-m:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.keysym.C-equal:  perl:font-size:reset
+URxvt.keysym.C-slash:  perl:font-size:show
+
 
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000

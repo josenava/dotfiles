@@ -1,5 +1,12 @@
+
+export TERM="xterm-256color"
+export TERMINAL="termite"
+
 # Path to your oh-my-zsh installation.
+
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH=/usr/share/oh-my-zsh/
 
 HISTFILE=~/.histfile
@@ -97,3 +104,5 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+
