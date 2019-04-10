@@ -1,6 +1,5 @@
 
-export TERM="xterm-256color"
-export TERMINAL="termite"
+export TERM="st-256color"
 
 # Path to your oh-my-zsh installation.
 
@@ -96,7 +95,7 @@ alias dcup="docker-compose up -d"
 alias dcdown="docker-compose down"
 alias dcps="docker-compose ps"
 alias update="yay -Syu"
-
+alias vim="nvim"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

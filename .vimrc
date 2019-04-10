@@ -22,12 +22,13 @@ Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'hdima/python-syntax'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'nvie/vim-flake8'
 " themes
 Plugin 'vim-airline/vim-airline'
@@ -36,8 +37,10 @@ Plugin 'danilo-augusto/vim-afterglow'
 Plugin 'jdsimcoe/abstract.vim'
 Plugin 'dracula/vim'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'ayu-theme/ayu-vim'
 Plugin 'christophermca/meta5'
 Plugin 'jacoborus/tender.vim'
+Plugin 'dikiaap/minimalist'
 " end themes
 
 Plugin 'godlygeek/tabular'
@@ -53,9 +56,22 @@ syntax on
 
 " color scheme
 set termguicolors
-set background=dark
-colorscheme PaperColor
-let g:airline_theme = 'bubblegum'
+"set background=dark
+let ayucolor="dark"
+colorscheme ayu
+"colorscheme PaperColor
+let g:airline_theme = 'ayu'
+" colorscheme minimalist
+"let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '│'
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
+let g:airline_left_alt_sep = '│'
+let g:airline_right_alt_sep = '│'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 set tabstop=4
 set softtabstop=4
@@ -79,6 +95,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let NERDTreeShowHidden=1
 
 " ale config
+let g:ale_enabled = 0
 let b:ale_linters = ['flake8']
 let g:airline#extensions#ale#enabled = 1
 " vim-gutter
@@ -152,5 +169,6 @@ let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
 
+let g:python_host_prog='/usr/bin/python'
 " maps
 nmap \q :nohlsearch<CR>

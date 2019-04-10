@@ -41,7 +41,7 @@ Xft.lcdfilter : lcddefault
 *color16: #FFA500
 *color17: #FF8C00
 
-*alpha: 0.85
+*alpha: 0.95
 
 URxvt.intensityStyles:	false
 URxvt*background:       [85]#000000
