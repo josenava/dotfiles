@@ -19,28 +19,26 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 " Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'hdima/python-syntax'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'nvie/vim-flake8'
+Plugin 'vim-python/python-syntax'
+Plugin 'fatih/vim-go'
 " themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'danilo-augusto/vim-afterglow'
-Plugin 'jdsimcoe/abstract.vim'
-Plugin 'dracula/vim'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ayu-theme/ayu-vim'
-Plugin 'christophermca/meta5'
-Plugin 'jacoborus/tender.vim'
-Plugin 'dikiaap/minimalist'
+Plugin 'joshdick/onedark.vim'
+Plugin 'tyrannicaltoucan/vim-quantum'
 " end themes
 
 Plugin 'godlygeek/tabular'
@@ -57,12 +55,11 @@ syntax on
 " color scheme
 set termguicolors
 "set background=dark
-let ayucolor="dark"
-colorscheme ayu
-"colorscheme PaperColor
-let g:airline_theme = 'ayu'
-" colorscheme minimalist
-"let g:airline_theme='minimalist'
+" let ayucolor="dark"
+" colorscheme onedark
+colorscheme PaperColor
+" let g:airline_theme = 'ayu'
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -72,6 +69,7 @@ let g:airline_right_sep = ' '
 let g:airline_left_alt_sep = '│'
 let g:airline_right_alt_sep = '│'
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#ale#enabled = 1
 
 set tabstop=4
 set softtabstop=4
@@ -94,10 +92,6 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let NERDTreeShowHidden=1
 
-" ale config
-let g:ale_enabled = 0
-let b:ale_linters = ['flake8']
-let g:airline#extensions#ale#enabled = 1
 " vim-gutter
 set updatetime=100
 
@@ -118,31 +112,18 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" python
-au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
-
-"spaces for indents
-au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
-au BufRead,BufNewFile *.py,*.pyw set expandtab
-au BufRead,BufNewFile *.py set softtabstop=4
+au BufRead,BufNewFile *.c,*.h set tabstop=4
 
 " Use the below highlight group when displaying bad whitespace is desired.
 highlight BadWhitespace ctermbg=red guibg=red
 
-" Display tabs at the beginning of a line in Python mode as bad.
-au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 " Make trailing whitespace be flagged as bad.
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" Wrap text after a certain number of characters
-au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
-
 " Use UNIX (\n) line endings.
-au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
+au BufNewFile *.c,*.h set fileformat=unix
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-autocmd FileType python set autoindent
 
-" let python_highlight_all=1
 set encoding=utf-8
 
 " fzf
@@ -162,7 +143,6 @@ nmap <C-F> :Ag<CR>
 " tagbar
 nmap <F8> :TagbarToggle<CR>
 
-let python_highlight_all = 1
 
 let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
@@ -172,3 +152,6 @@ let g:gitgutter_sign_modified_removed = '∙'
 let g:python_host_prog='/usr/bin/python'
 " maps
 nmap \q :nohlsearch<CR>
+vmap <C-c> "+y
+nmap <leader>gt :bnext<CR>
+nmap <leader>gT :bprevious<CR>

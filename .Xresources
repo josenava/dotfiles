@@ -9,7 +9,7 @@ Xft.lcdfilter : lcddefault
 
 !!*foreground: #00cc00
 !!*foreground_bold: #a8a19f
-*cursor: #a8a19f
+/* *cursor: #a8a19f */
 !!*background:   [90]#1b1918
 !!*background: rgba(0, 0, 0, .7)
 
@@ -41,7 +41,6 @@ Xft.lcdfilter : lcddefault
 *color16: #FFA500
 *color17: #FF8C00
 
-*alpha: 0.95
 
 URxvt.intensityStyles:	false
 URxvt*background:       [85]#000000
