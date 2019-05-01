@@ -17,7 +17,8 @@ Plugin 'gmarik/Vundle.vim'
 " execute pathogen#infect()
 " plugin conf
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'tmhedberg/SimpylFold'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
@@ -27,9 +28,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-python/python-syntax'
+Plugin 'janko/vim-test'
 Plugin 'fatih/vim-go'
 " themes
 Plugin 'vim-airline/vim-airline'
@@ -39,6 +42,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'tyrannicaltoucan/vim-quantum'
+Plugin 'ryanoasis/vim-devicons'
 " end themes
 
 Plugin 'godlygeek/tabular'
@@ -54,12 +58,9 @@ syntax on
 
 " color scheme
 set termguicolors
-"set background=dark
-" let ayucolor="dark"
-" colorscheme onedark
 colorscheme PaperColor
-" let g:airline_theme = 'ayu'
-let g:airline_theme='minimalist'
+
+let g:airline_theme='ayu_dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -73,7 +74,7 @@ let g:airline#extensions#ale#enabled = 1
 
 set tabstop=4
 set softtabstop=4
-set number relativenumber
+set relativenumber
 set showmatch
 set hlsearch
 set incsearch
@@ -88,7 +89,7 @@ let mapleader=" "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-k>b :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let NERDTreeShowHidden=1
 
@@ -138,7 +139,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " fzf maps
 nmap <C-p> :Files<CR>
-nmap <C-F> :Ag<CR>
+nmap <C-n> :Ag<CR>
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -149,7 +150,13 @@ let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
 
-let g:python_host_prog='/usr/bin/python'
+let g:python3_host_prog='/usr/bin/python'
+
+let g:deoplete#enable_at_startup = 1
+
+let test#strategy = "dispatch"
+
+
 " maps
 nmap \q :nohlsearch<CR>
 vmap <C-c> "+y

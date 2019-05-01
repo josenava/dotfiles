@@ -1,8 +1,8 @@
 
-export TERM="st-256color"
+# export TERM="st-256color"
 
 # Path to your oh-my-zsh installation.
-
+# export PATH="$PATH:$PYENV_ROOT/shims"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -107,7 +107,6 @@ plugins=(
 	pyenv
 	npm
 	history
-	vi-mode
 )
 
 
