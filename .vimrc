@@ -19,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
+Plugin 'deoplete-plugins/deoplete-jedi'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
@@ -34,10 +35,12 @@ Plugin 'nvie/vim-flake8'
 Plugin 'vim-python/python-syntax'
 Plugin 'janko/vim-test'
 Plugin 'fatih/vim-go'
+" snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'danilo-augusto/vim-afterglow'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'joshdick/onedark.vim'
@@ -58,9 +61,32 @@ syntax on
 
 " color scheme
 set termguicolors
-colorscheme PaperColor
+" let g:PaperColor_Theme_Options = {
+"   \   'language': {
+"   \     'python': {
+"   \       'highlight_builtins' : 1
+"   \     }
+"   \   }
+"   \ }
 
-let g:airline_theme='ayu_dark'
+" colorscheme PaperColor
+" let ayucolor='mirage'
+" colorscheme ayu
+
+let g:onedark_terminal_italics = 1
+if (has("autocmd"))
+  augroup colorextend
+    autocmd!
+    autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold", "cterm": "bold" })
+    autocmd ColorScheme * call onedark#extend_highlight("Conditional", { "gui": "bold", "cterm": "bold" })
+    autocmd ColorScheme * call onedark#extend_highlight("Repeat", { "gui": "bold", "cterm": "bold" })
+    autocmd ColorScheme * call onedark#extend_highlight("Label", { "gui": "bold", "cterm": "bold" })
+  augroup END
+endif
+
+colorscheme onedark
+
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
@@ -89,7 +115,7 @@ let mapleader=" "
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-map <C-k>b :NERDTreeToggle<CR>
+map <C-a>b :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let NERDTreeShowHidden=1
 
@@ -101,10 +127,9 @@ set updatetime=100
 " set foldlevel=99
 " nnoremap <space> za
 
-" autocomplete
-"let g:ycm_autoclose_preview_window_after_completion=1
-"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " split files
 set splitbelow splitright
@@ -153,6 +178,7 @@ let g:gitgutter_sign_modified_removed = '∙'
 let g:python3_host_prog='/usr/bin/python'
 
 let g:deoplete#enable_at_startup = 1
+let g:jedi#completions_enabled = 0
 
 let test#strategy = "dispatch"
 
@@ -162,3 +188,5 @@ nmap \q :nohlsearch<CR>
 vmap <C-c> "+y
 nmap <leader>gt :bnext<CR>
 nmap <leader>gT :bprevious<CR>
+
+set mouse=a
