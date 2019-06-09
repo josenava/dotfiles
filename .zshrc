@@ -1,6 +1,8 @@
 
 # export TERM="st-256color"
 
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 # Path to your oh-my-zsh installation.
 # export PATH="$PATH:$PYENV_ROOT/shims"
 

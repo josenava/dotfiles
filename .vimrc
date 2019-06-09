@@ -1,90 +1,62 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call dein#begin('~/.vim/dein')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
+call dein#add('airblade/vim-gitgutter')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('roxma/nvim-yarp')
+call dein#add('deoplete-plugins/deoplete-jedi')
+call dein#add('vim-scripts/indentpython.vim', {'on_ft': ['python']})
+call dein#add('w0rp/ale')
+call dein#add('davidhalter/jedi-vim')
+call dein#add('majutsushi/tagbar')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-commentary')
+call dein#add('tpope/vim-dispatch')
+call dein#add('sheerun/vim-polyglot')
+call dein#add('nvie/vim-flake8')
+call dein#add('vim-python/python-syntax', {'on_ft': ['python']})
+call dein#add('janko/vim-test')
+call dein#add('fatih/vim-go', {'on_ft': ['go']})
+call dein#add('deoplete-plugins/deoplete-go', { 'do': 'make' })
+call dein#add('elzr/vim-json')
+call dein#add('tpope/vim-vinegar')
+call dein#add('hashivim/vim-terraform')
+"" snippets
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
+"" themes
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+call dein#add('NLKNguyen/papercolor-theme')
+call dein#add('ayu-theme/ayu-vim')
+call dein#add('joshdick/onedark.vim')
+call dein#add('vivkin/flatland.vim')
+call dein#add('wsdjeg/dein-ui.vim')
+"" end themes
 
-" ...
-" execute pathogen#infect()
-" plugin conf
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'deoplete-plugins/deoplete-jedi'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'w0rp/ale'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-dispatch'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-python/python-syntax'
-Plugin 'janko/vim-test'
-Plugin 'fatih/vim-go'
-" snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-" themes
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'ayu-theme/ayu-vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'tyrannicaltoucan/vim-quantum'
-Plugin 'ryanoasis/vim-devicons'
-" end themes
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
+call dein#add('junegunn/fzf.vim')
 
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call dein#end()
+
 filetype plugin indent on    " required
 
 syntax on
 
 " color scheme
 set termguicolors
-" let g:PaperColor_Theme_Options = {
-"   \   'language': {
-"   \     'python': {
-"   \       'highlight_builtins' : 1
-"   \     }
-"   \   }
-"   \ }
 
-" colorscheme PaperColor
-" let ayucolor='mirage'
-" colorscheme ayu
-
-let g:onedark_terminal_italics = 1
-if (has("autocmd"))
-  augroup colorextend
-    autocmd!
-    autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold", "cterm": "bold" })
-    autocmd ColorScheme * call onedark#extend_highlight("Conditional", { "gui": "bold", "cterm": "bold" })
-    autocmd ColorScheme * call onedark#extend_highlight("Repeat", { "gui": "bold", "cterm": "bold" })
-    autocmd ColorScheme * call onedark#extend_highlight("Label", { "gui": "bold", "cterm": "bold" })
-  augroup END
-endif
-
-colorscheme onedark
+colorscheme flatland
 
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
@@ -100,7 +72,7 @@ let g:airline#extensions#ale#enabled = 1
 
 set tabstop=4
 set softtabstop=4
-set relativenumber
+set number relativenumber
 set showmatch
 set hlsearch
 set incsearch
@@ -109,23 +81,11 @@ set laststatus=2
 
 let mapleader=" "
 
-
-" Nerdtree
-" Open it when there is no file
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-map <C-a>b :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-let NERDTreeShowHidden=1
+let g:netrw_liststyle=3
+let g:netrw_winsize=20
 
 " vim-gutter
 set updatetime=100
-
-" Enable folding
-" set foldmethod=indent
-" set foldlevel=99
-" nnoremap <space> za
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -182,6 +142,9 @@ let g:jedi#completions_enabled = 0
 
 let test#strategy = "dispatch"
 
+" terraform
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1
 
 " maps
 nmap \q :nohlsearch<CR>
