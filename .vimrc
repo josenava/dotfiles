@@ -10,39 +10,40 @@ call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('roxma/nvim-yarp')
-call dein#add('deoplete-plugins/deoplete-jedi')
+call dein#add('deoplete-plugins/deoplete-jedi', {'on_ft': ['python']})
 call dein#add('vim-scripts/indentpython.vim', {'on_ft': ['python']})
 call dein#add('w0rp/ale')
-call dein#add('davidhalter/jedi-vim')
-call dein#add('majutsushi/tagbar')
-call dein#add('tpope/vim-surround')
+call dein#add('davidhalter/jedi-vim', {'on_ft': ['python']})
+call dein#add('majutsushi/tagbar', {'on_map': {'n': '<Plug>'}})
+call dein#add('tpope/vim-surround', {'on_map': {'n': '<Plug>'}})
 call dein#add('tpope/vim-fugitive')
-call dein#add('tpope/vim-commentary')
+call dein#add('tpope/vim-commentary', {'on_map': {'n': '<Plug>'}})
 call dein#add('tpope/vim-dispatch')
 call dein#add('sheerun/vim-polyglot')
-call dein#add('nvie/vim-flake8')
+call dein#add('nvie/vim-flake8', {'on_ft': ['python']})
 call dein#add('vim-python/python-syntax', {'on_ft': ['python']})
 call dein#add('janko/vim-test')
 call dein#add('fatih/vim-go', {'on_ft': ['go']})
-call dein#add('deoplete-plugins/deoplete-go', { 'do': 'make' })
-call dein#add('elzr/vim-json')
+call dein#add('deoplete-plugins/deoplete-go', {'on_ft': ['go']})
+call dein#add('elzr/vim-json', {'on_ft': ['json']})
 call dein#add('tpope/vim-vinegar')
-call dein#add('hashivim/vim-terraform')
+call dein#add('itchyny/lightline.vim')
+call dein#add('mengelbrecht/lightline-bufferline')
+call dein#add('hashivim/vim-terraform', {'on_ft': ['terraform']})
 "" snippets
-call dein#add('SirVer/ultisnips')
-call dein#add('honza/vim-snippets')
+call dein#add('SirVer/ultisnips', {'on_ft': ['go', 'python']})
+call dein#add('honza/vim-snippets', {'on_ft': ['go', 'python']})
 "" themes
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
 call dein#add('NLKNguyen/papercolor-theme')
+call dein#add('sainnhe/vim-color-forest-night')
 call dein#add('ayu-theme/ayu-vim')
 call dein#add('joshdick/onedark.vim')
-call dein#add('vivkin/flatland.vim')
+call dein#add('josenava/flatland')
 call dein#add('wsdjeg/dein-ui.vim')
 "" end themes
 
 call dein#add('godlygeek/tabular')
-call dein#add('plasticboy/vim-markdown')
+call dein#add('plasticboy/vim-markdown', {'on_ft': ['markdown']})
 
 call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
 call dein#add('junegunn/fzf.vim')
@@ -58,18 +59,25 @@ set termguicolors
 
 colorscheme flatland
 
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '│'
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
-let g:airline_left_alt_sep = '│'
-let g:airline_right_alt_sep = '│'
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#ale#enabled = 1
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#min_buffer_count = 2
+
+set encoding=utf-8
 set tabstop=4
 set softtabstop=4
 set number relativenumber
@@ -77,6 +85,7 @@ set showmatch
 set hlsearch
 set incsearch
 set cursorline
+set noshowmode
 set laststatus=2
 
 let mapleader=" "
@@ -109,8 +118,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " Use UNIX (\n) line endings.
 au BufNewFile *.c,*.h set fileformat=unix
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-set encoding=utf-8
 
 " fzf
 let g:fzf_action = {

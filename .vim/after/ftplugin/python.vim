@@ -14,5 +14,3 @@ setlocal tabstop=4
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 
 let b:python_highlight_all = 1
-
-
