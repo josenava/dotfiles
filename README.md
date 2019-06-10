@@ -1,5 +1,8 @@
-# dotfile
+# Dotfiles
 
-My dotfiles for i3, urxvt & i3blocks.
+My linux dotfiles for i3, st(fork to be added) & polybar.
 
-i3blocks/scripts/spotify.py requires python-dbus
+
+These dotfiles someday will be required by an ansible script to be installed in any computer.
+
+Checkout my neovim confing, I am pretty confortable with it :D
