@@ -99,12 +99,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 au BufNewFile *.c,*.h set fileformat=unix
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" tagbar
-nmap <F8> :TagbarToggle<CR>
-
 let g:python3_host_prog='/usr/bin/python'
-
-let g:jedi#completions_enabled = 0
 
 let test#strategy = "dispatch"
 
@@ -115,5 +110,3 @@ nmap <leader>gt :bnext<CR>
 nmap <leader>gT :bprevious<CR>
 
 set mouse=a
-
-let g:go_def_mapping_enabled = 0

@@ -250,7 +250,7 @@ client.focused		$white		$orange		$white	$darkorange		$darkorange
 
 
 #startup
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/solar_system.png
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/Rick-and-Morty-Wallpapers-027.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
 #exec_always --no-startup-id nitrogen --restore
