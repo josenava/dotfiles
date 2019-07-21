@@ -2,11 +2,11 @@
 syn region pythonDocstring  start=+^\s*[uU]\?[rR]\?'''+ end=+'''+ keepend
   \ excludenl contains=pythonEscape,@Spell,pythonSpaceError",pythonDoctest,pythonDocTest2
 " " Make these special variables more special
-syn keyword pythonSpecial False True None self
+syn keyword pythonBoolean False True None self
 " " Highlight def statements different from normal python statements
 " syn keyword pythonDef def class del global lambda nonlocal
 " " Highlight 'as' different from normal python statements
-syn keyword pythonAs as
+syn keyword pythonInclude as
 " " Highlight the whole name of a decorator, not just the '@'
 syn match pythonDecorator "@\w\.\+\>"
 " " Highlight 'magic' overload functions

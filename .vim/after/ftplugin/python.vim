@@ -1,8 +1,3 @@
-" ale config
-let b:ale_enabled = 1
-let b:ale_linters = ['flake8']
-let b:ale_fixers = ['autopep8', 'isort']
-
 setlocal autoindent
 setlocal shiftwidth=4
 setlocal expandtab

@@ -151,3 +151,5 @@ auto_pipenv_shell
 
 source $ZSH/oh-my-zsh.sh
 
+
+eval $(thefuck --alias)
