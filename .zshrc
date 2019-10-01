@@ -1,6 +1,6 @@
-
-# export TERM="st-256color"
-
+export TERM="st-256color"
+export VISUAL=/usr/bin/vim
+export EDITOR=$VISUAL
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Path to your oh-my-zsh installation.
@@ -17,7 +17,7 @@ SAVEHIST=1000
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -56,7 +56,7 @@ POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='clear'
 POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='green'
 # end of config
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # HYPHEN_INSENSITIVE="true"
 
@@ -111,28 +111,12 @@ plugins=(
 	history
 )
 
-
-neofetch
-
-#alias
-alias ls="ls --color"
-alias l="ls -lhart"
-alias gpull="git pull"
-alias gpush="git push"
-alias ga="git add"
-alias gs="git status"
-alias gcm="git commit -m"
-alias dcup="docker-compose up -d"
-alias dcdown="docker-compose down"
-alias dcps="docker-compose ps"
-alias update="yay -Syu"
-alias vim="nvim"
-
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+eval "$(pyenv init -)"
 # auto_pipenv
 function auto_pipenv_shell {
     if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
@@ -151,5 +135,22 @@ auto_pipenv_shell
 
 source $ZSH/oh-my-zsh.sh
 
+neofetch
+
+#alias
+alias ls="ls --color"
+alias l="ls -lhart"
+alias gpull="git pull"
+alias gpush="git push"
+alias ga="git add"
+alias gs="git status"
+alias gcm="git commit -m"
+alias gsw="git switch"
+alias gswc="git switch -c"
+alias dcup="docker-compose up -d"
+alias dcdown="docker-compose down"
+alias dcps="docker-compose ps"
+alias update="yay -Syu"
+alias neovim="~/nvim.appimage"
 
 eval $(thefuck --alias)
