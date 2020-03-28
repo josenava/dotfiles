@@ -1,10 +1,22 @@
-export TERM="st-256color"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export TERM="screen-256color"
 export VISUAL=/usr/bin/vim
 export EDITOR=$VISUAL
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # Path to your oh-my-zsh installation.
-# export PATH="$PATH:$PYENV_ROOT/shims"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH="$PATH:$PYENV_ROOT/shims"
+
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.local/virtualenv
+source /usr/bin/virtualenvwrapper_lazy.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -17,7 +29,7 @@ SAVEHIST=1000
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -70,7 +82,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -102,13 +114,8 @@ ZSH_CUSTOM=/home/jose/.oh-my-zsh/custom
 plugins=(
 	git
 	zsh-syntax-highlighting
-	virtualenv
-	pip
-	python
-	docker
-	pyenv
-	npm
 	history
+        virtualenv
 )
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
@@ -116,26 +123,29 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-eval "$(pyenv init -)"
-# auto_pipenv
-function auto_pipenv_shell {
-    if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
-        if [ -f "Pipfile" ] ; then
-            pipenv shell
-        fi
-    fi
-}
+# eval "$(pyenv init -)"
+# # auto_pipenv
+# function auto_pipenv_shell {
+#     if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
+#         if [ -f "Pipfile" ] ; then
+#             pipenv shell
+#         fi
+#     fi
+# }
 
-function cd {
-    builtin cd "$@"
-    auto_pipenv_shell
-}
+# function auto_virtualenv {
+#     if [[ -n ${VIRTUAL_ENV} ]]; then
+#         echo "hey ${VIRTUAL_ENV}"
+#     fi
+# }
+# function cd {
+#     builtin cd "$@"
+#     auto_virtualenv
+# }
 
-auto_pipenv_shell
+# auto_pipenv_shell
 
 source $ZSH/oh-my-zsh.sh
-
-neofetch
 
 #alias
 alias ls="ls --color"
@@ -151,6 +161,13 @@ alias dcup="docker-compose up -d"
 alias dcdown="docker-compose down"
 alias dcps="docker-compose ps"
 alias update="yay -Syu"
-alias neovim="~/nvim.appimage"
+# alias neovim="~/nvim.appimage"
+
 
 eval $(thefuck --alias)
+
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

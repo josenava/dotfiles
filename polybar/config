@@ -56,8 +56,8 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = 
-modules-right = pulseaudio xkeyboard battery memory date 
+modules-center =
+modules-right = pulseaudio xkeyboard battery memory date
 
 
 tray-position = right
@@ -205,7 +205,7 @@ label =  %gb_free%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -429,7 +429,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

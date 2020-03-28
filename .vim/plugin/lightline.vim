@@ -1,13 +1,14 @@
 " lightline
+if !has('nvim')
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'coc_status' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus'] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'coc_status': 'coc#status'
+      \   'gitbranch': 'FugitiveHead',
+	  \   'cocstatus': 'coc#status',
       \ },
       \ 'mode_map': {
 			\ 'n' : 'N',
@@ -25,8 +26,12 @@ let g:lightline = {
 \ }
 
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type = {'buffers': 'tabsel'}
+let g:lightline.component_expand = {
+	\ 'buffers': 'lightline#bufferline#buffers',
+	\}
 let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#min_buffer_count = 2
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+endif

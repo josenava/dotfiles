@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jose/projects/campaigns/infra'
+let g:netrw_dirhist_2='/home/jose/projects/campaigns/infra/services'
+let g:netrw_dirhist_3='/home/jose/projects/campaigns'
+let g:netrw_dirhist_4='/home/jose/projects/campaigns/infra/services/templates'
+let g:netrw_dirhist_5='/home/jose/projects/campaigns/infra/services/templates/lambda'
+let g:netrw_dirhist_6='/home/jose/projects/campaigns/infra/services/tfvars'
