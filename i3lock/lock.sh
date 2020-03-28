@@ -32,7 +32,7 @@ V='#ffae19bb'  # verifying
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
---datestr="%A, %m %Y" \
+--datestr="%d-%m-%Y" \
 --keylayout 2         \
 
 # --veriftext="Drinking verification can..."
