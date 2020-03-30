@@ -61,6 +61,9 @@ set incsearch
 " set cursorline
 set noshowmode
 set laststatus=2
+set lazyredraw
+set smartcase ignorecase
+set autoread
 
 set clipboard+=unnamedplus
 set undofile
