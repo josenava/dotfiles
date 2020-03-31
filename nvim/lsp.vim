@@ -12,6 +12,7 @@ nvim_lsp.pyls.setup{
         };
         pyflakes = { enabled = true; };
         autopep8 = { enabled = false; };
+        pyls_mypy = { enabled = true; };
     };
 }
 require'nvim_lsp'.gopls.setup{}
