@@ -1,6 +1,0 @@
-<application>
-  <component name="ScratchFileService">
-    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" value="HTTP Request" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.php" value="TEXT" />
-  </component>
-</application>

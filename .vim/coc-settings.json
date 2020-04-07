@@ -1,19 +1,19 @@
 {
-	"python.formatting.provider": "black",
-	"python.jediEnabled": true,
-	"python.linting.mypyEnabled": true,
-	"languageserver": {
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": [
-				"go.mod",
-				".vim/",
-				".git/",
-				".hg/"
-			],
-			"filetypes": [
-				"go"
-			]
-		}
-	}
+  "python.formatting.provider": "black",
+  "python.jediEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
+    }
+  }
 }

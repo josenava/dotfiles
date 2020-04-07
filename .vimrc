@@ -9,13 +9,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-if has('nvim')
-    Plug 'neovim/nvim-lsp'
-else
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'itchyny/lightline.vim'
-    Plug 'mengelbrecht/lightline-bufferline'
-endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" if has('nvim')
+    " Plug 'neovim/nvim-lsp'
+" else
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" endif
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -25,8 +24,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
 Plug 'dracula/vim'
-Plug 'jaredgorski/spacecamp'
-Plug 'hardselius/warlock'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -40,10 +38,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " colorscheme peachpuff
 let ayucolor="dark"
 colorscheme ayu
-" colorscheme spacecamp_lite
-" colorscheme one
 " colorscheme dracula
-" colorscheme warlock
+" colorscheme nord
 
 let g:python3_host_prog='/usr/bin/python'
 
