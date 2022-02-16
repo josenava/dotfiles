@@ -23,7 +23,7 @@ gaps outer 3
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -206,8 +206,8 @@ client.focused		$black		$orange		$white	$black		$black
 #startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id picom -i 1.0
+exec_always --no-startup-id picom -i 1.0 --no-fading-openclose
 exec_always --no-startup-id setxkbmap -layout us,es -option grp:shift_caps_toggle
 exec_always --no-startup-id xfce4-power-mananger
-exec_always --no-startup-id autorandr --change office
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/arch.png
+exec_always --no-startup-id autorandr --change wfh
+exec_always --no-startup-id ~/.fehbg

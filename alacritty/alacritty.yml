@@ -98,9 +98,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
+    # family: BlexMono Nerd Font
     # family: InconsolataLGC Nerd Font
-    family: JetBrains Mono
-    # family: FuraCode Nerd Font
+    # family: JetBrains Mono
+    family: FiraCode Nerd Font
     # family: DejaVuSansMono Nerd Font
     # family: MesloLGM Nerd Font
     # family: Iosevka Nerd Font
@@ -116,9 +117,11 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
+    # family: BlexMono Nerd Font
     # family: InconsolataLGC Nerd Font
-    # family: FuraCode Nerd Font
-    family: JetBrains Mono
+    family: FiraCode Nerd Font
+    # family: Ubuntu Mono
+    # family: JetBrains Mono
     # family: MesloLGM Nerd Font
     # family: monospace
     # family: Iosevka Nerd Font
@@ -132,10 +135,12 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
+    # family: BlexMono Nerd Font
+    # family: Ubuntu Mono
     # family: InconsolataLGC Nerd Font
-    # family: FuraCode Nerd Font
+    family: FiraCode Nerd Font
     # family: MesloLGM Nerd Font
-    family: JetBrains Mono
+    # family: JetBrains Mono
     # family: monospace
     # family: Iosevka Nerd Font
 
@@ -180,92 +185,92 @@ draw_bold_text_with_bright_colors: true
 colors:
   # tokyo-night
     # Default colors
-  primary:
-    background: '0x1a1b26'
-    foreground: '0xa9b1d6'
+  # primary:
+  #   background: '0x1a1b26'
+  #   foreground: '0xa9b1d6'
 
-  # Normal colors
-  normal:
-    black:   '0x32344a'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xad8ee6'
-    cyan:    '0x449dab'
-    white:   '0x787c99'
+  # # Normal colors
+  # normal:
+  #   black:   '0x32344a'
+  #   red:     '0xf7768e'
+  #   green:   '0x9ece6a'
+  #   yellow:  '0xe0af68'
+  #   blue:    '0x7aa2f7'
+  #   magenta: '0xad8ee6'
+  #   cyan:    '0x449dab'
+  #   white:   '0x787c99'
 
-  # Bright colors
-  bright:
-    black:   '0x444b6a'
-    red:     '0xff7a93'
-    green:   '0xb9f27c'
-    yellow:  '0xff9e64'
-    blue:    '0x7da6ff'
-    magenta: '0xbb9af7'
-    cyan:    '0x0db9d7'
-    white:   '0xacb0d0'
+  # # Bright colors
+  # bright:
+  #   black:   '0x444b6a'
+  #   red:     '0xff7a93'
+  #   green:   '0xb9f27c'
+  #   yellow:  '0xff9e64'
+  #   blue:    '0x7da6ff'
+  #   magenta: '0xbb9af7'
+  #   cyan:    '0x0db9d7'
+  #   white:   '0xacb0d0'
   # Default colors
 # Colors (One Dark)
 # colors:
-#   primary:
-#     background: '#282c34'
-#     foreground: '#abb2bf'
+  primary:
+    background: '#282c34'
+    foreground: '#abb2bf'
 
-#   # Normal colors
-#   normal:
-#     # NOTE: Use '#131613' for the `black` color if you'd like to see
-#     # black text on the background.
-#     black:   '#282c34'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#abb2bf'
+  # Normal colors
+  normal:
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black:   '#282c34'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#d19a66'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
 
-#   # Bright colors
-#   bright:
-#     black:   '#5c6370'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#ffffff'
+  # Bright colors
+  bright:
+    black:   '#5c6370'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#d19a66'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#ffffff'
 
 # One light
 # colors:
 #   # Default colors
-#   primary:
-#     foreground: '#282c34'
-#     background: '#ffffff'
+  # primary:
+  #   foreground: '#282c34'
+  #   background: '#ffffff'
 
-#   # Normal colors
-#   normal:
-#     # NOTE: Use '#131613' for the `black` color if you'd like to see
-#     # black text on the background.
-#     black:   '#282c34'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#abb2bf'
+  # # Normal colors
+  # normal:
+  #   # NOTE: Use '#131613' for the `black` color if you'd like to see
+  #   # black text on the background.
+  #   black:   '#282c34'
+  #   red:     '#e06c75'
+  #   green:   '#98c379'
+  #   yellow:  '#d19a66'
+  #   blue:    '#61afef'
+  #   magenta: '#c678dd'
+  #   cyan:    '#56b6c2'
+  #   white:   '#abb2bf'
 
-#   # Bright colors
-#   bright:
-#     black:   '#5c6370'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#d19a66'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#ffffff'
+  # # Bright colors
+  # bright:
+  #   black:   '#5c6370'
+  #   red:     '#e06c75'
+  #   green:   '#98c379'
+  #   yellow:  '#d19a66'
+  #   blue:    '#61afef'
+  #   magenta: '#c678dd'
+  #   cyan:    '#56b6c2'
+  #   white:   '#ffffff'
 
 # Colors (PaperColor - Light)
 # colors:
@@ -493,27 +498,27 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
 
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux) xdg-open
-    #   - (Windows) explorer
-    launcher:
-     program: firefox
-    #  args: []
+  #url:
+  #  # URL launcher
+  #  #
+  #  # This program is executed when clicking on a text which is recognized as a URL.
+  #  # The URL is always added to the command as the last parameter.
+  #  #
+  #  # When set to `None`, URL launching will be disabled completely.
+  #  #
+  #  # Default:
+  #  #   - (macOS) open
+  #  #   - (Linux) xdg-open
+  #  #   - (Windows) explorer
+  #  launcher:
+  #   program: firefox
+  #  #  args: []
 
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    modifiers: None
+  #  # URL modifiers
+  #  #
+  #  # These are the modifiers that need to be held down for opening URLs when clicking
+  #  # on them. The available modifiers are documented in the key binding section.
+  #  modifiers: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"

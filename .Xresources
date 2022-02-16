@@ -6,6 +6,8 @@ Xft.autohint  : false
 Xft.hintstyle : hintfull
 Xft.lcdfilter : lcddefault
 
+Xcursor.theme : DMZ-Black
+
 
 
 ! Dracula Xresources palette
@@ -207,31 +209,6 @@ Xft.lcdfilter : lcddefault
 /* ! white */
 /* *.color7:       #ABB2BF */
 /* *.color15:      #5C6370 */
-
-URxvt.intensityStyles:	false
-URxvt*background:       [85]#000000
-URxvt*foreground:       #F1EFEE
-URxvt*depth:		32
-URxvt.font: xft:FuraCode Nerd Font Mono:style=Medium,Regular:size=24
-URxvt.boldFont: xft: FuraCode Nerd Font Mono:style=Medium,Bold:size=24
-URxvt.italicFont: xft: FuraCode Nerd Font Mono:style=Medium,Italic:size=24
-URxvt.boldItalicFont: xft: FuraCode Nerd Font Mono:style=Bold Italic:size=24
-URxvt.scrollBar:	false
-URxvt.cursorColor: 	white
-URxvt.perl-ext-common:      default,tabbedex,clipboard,url-select,keyboard-select,font-size
-URxvt.url-select.launcher:  firefox
-URxvt.url-select.underline: true
-kRxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.M-Up:     perl:font-size:increase
-URxvt.keysym.C-m:   perl:font-size:decrease
-URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-URxvt.keysym.C-S-Down: perl:font-size:decglobal
-URxvt.keysym.C-equal:  perl:font-size:reset
-URxvt.keysym.C-slash:  perl:font-size:show
-
-
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000
 rofi.color-normal:	#111, #819396, #222, #FFA500, #ffffff

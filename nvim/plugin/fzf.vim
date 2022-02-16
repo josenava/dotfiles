@@ -39,3 +39,4 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " fzf maps
 nmap <C-p> :Files<CR>
 nmap <C-n> :Ag<CR>
+nmap <A-b> :Buffers<CR>

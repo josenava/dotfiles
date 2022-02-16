@@ -67,6 +67,9 @@
 " endfunction
 
 " function! LspStatus() abort
+"     if !has('nvim')
+"         return ''
+"     endif
 "     let sl = ''
 "     if luaeval('vim.lsp.buf.server_ready()')
 "         let sl.='%#MyStatuslineLSP#E:'
@@ -74,7 +77,7 @@
 "         let sl.='%#MyStatuslineLSP# W:'
 "         let sl.='%#MyStatuslineLSPWarnings#%{luaeval("vim.lsp.util.buf_diagnostics_count(\"Warning\")")}'
 "     else
-"         let sl.=''
+"         let sl.='%#MyStatuslineLSPErrors#off'
 "     endif
 "     return sl
 " endfunction
